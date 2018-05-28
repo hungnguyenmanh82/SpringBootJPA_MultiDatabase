@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>Home</title>
+      <style>
+        th, td {
+          padding: 5px;
+        }
+        table  {
+           border-collapse: collapse;
+        }
+       
+      </style>
+   </head>
+    
+   <body>
+       
+      <h3>Using Publisher-DB</h3>
+       
+      <table border="1">
+        <tr>
+           <th>ID</th>
+           <th>Name</th>
+        </tr>
+        <tr th:each="publisher : ${publishers}">
+           <td th:utext="${publisher.id}"></td>
+           <td th:utext="${publisher.name}"></td>
+        </tr>
+      </table>
+       
+      <h3>Using Advertiser-DB</h3>
+       
+      <table border="1">
+        <tr>
+           <th>ID</th>
+           <th>Name</th>
+        </tr>
+        <tr th:each="advertiser : ${advertisers}">
+           <td th:utext="${advertiser.id}"></td>
+           <td th:utext="${advertiser.name}"></td>
+        </tr>
+      </table>
+      
+       
+   </body>
+    
+</html>
