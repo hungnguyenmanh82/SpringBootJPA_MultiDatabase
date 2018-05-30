@@ -14,7 +14,7 @@ import com.example.demo.dao.PublisherDAO;
 import com.example.demo.entity1.Publisher;
 import com.example.demo.entity2.Advertiser;
  
-
+//@Controller là singleton
 @Controller
 public class MainController {
  

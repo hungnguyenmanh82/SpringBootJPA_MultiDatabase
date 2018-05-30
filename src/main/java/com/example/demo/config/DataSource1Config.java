@@ -27,12 +27,13 @@ public class DataSource1Config {
  
     @Bean
     public DataSource ds1Datasource() {
- 
+    	//dataSource tương ứng với 1 database
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name.1"));
         dataSource.setUrl(env.getProperty("spring.datasource.url.1"));
         dataSource.setUsername(env.getProperty("spring.datasource.username.1"));
         dataSource.setPassword(env.getProperty("spring.datasource.password.1"));
+        
  
         return dataSource;
     }
@@ -65,6 +66,8 @@ public class DataSource1Config {
         em.afterPropertiesSet();
         return em;
     }
+    
+    
  
     @Bean
     public PlatformTransactionManager ds1TransactionManager() {

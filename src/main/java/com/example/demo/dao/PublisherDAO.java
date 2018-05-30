@@ -12,7 +12,8 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.config.Constants;
 import com.example.demo.entity1.Publisher;
- 
+
+//@Repository là singleton
 @Repository
 public class PublisherDAO {
  
