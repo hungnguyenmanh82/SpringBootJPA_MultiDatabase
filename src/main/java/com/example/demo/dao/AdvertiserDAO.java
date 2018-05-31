@@ -13,13 +13,13 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.config.Constants;
 import com.example.demo.entity2.Advertiser;
 
-//@Repository là singleton
+//@Repository là singleton => annotation của Springboot dùng cho DAO object
 @Repository
 public class AdvertiserDAO {
   
  
     @Autowired
-    @PersistenceContext(unitName = Constants.JPA_UNIT_NAME_2)
+    @PersistenceContext(unitName = Constants.JPA_UNIT_NAME_2)  // annotation của JPA để xác định DataSource
     private EntityManager entityManager;
  
     public List<Advertiser> listAdvertisers() {

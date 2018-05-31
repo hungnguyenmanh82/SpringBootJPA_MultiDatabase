@@ -18,7 +18,7 @@ import com.example.demo.entity1.Publisher;
 public class PublisherDAO {
  
     @Autowired
-    @PersistenceContext( unitName= Constants.JPA_UNIT_NAME_1)
+    @PersistenceContext( unitName= Constants.JPA_UNIT_NAME_1)  // annotation của JPA để xác định DataSource
     private EntityManager entityManager;
  
     public List<Publisher> listPublishers() {
