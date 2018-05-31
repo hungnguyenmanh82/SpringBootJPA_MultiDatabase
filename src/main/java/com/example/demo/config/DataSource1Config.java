@@ -23,7 +23,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 public class DataSource1Config {
  
     @Autowired
-    private Environment env; // Contains Properties Load by @PropertySources
+    private Environment env; // Contains Properties Load by @PropertySources  "classpath:datasource-cfg.properties"
  
     @Bean
     public DataSource ds1Datasource() {

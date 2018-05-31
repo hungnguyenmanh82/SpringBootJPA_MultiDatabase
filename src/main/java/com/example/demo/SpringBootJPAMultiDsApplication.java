@@ -12,6 +12,8 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 /**
  * Vì Springboot auto config cho JPA trong trường hợp có 1 database để config (hay 1 FactorySession)
  * Trường hợp nhiều database thì ta phải config bằng tay => vì thế phải bỏ tính năng auto config
+ * 
+ *  https://o7planning.org/en/11653/using-multiple-datasources-with-spring-boot-and-jpa
  */
 @EnableAutoConfiguration(exclude = { //
         DataSourceAutoConfiguration.class, //
